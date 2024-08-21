@@ -4,7 +4,10 @@ import hawkimage from "../assets/hawkxc.png";
 export default function App() {
   return (
     <div id="navbar" className="flex flex-row items-center justify-between p-4">
-      <Image image={hawkimage} className={["w-16 rounded-md"]} />
+      <Image
+        image={hawkimage}
+        className={["w-16 rounded-md shadow-sm cursor-pointer"]}
+      />
       <div className="contextBox">
         <ul className="flex flex-row gap-8 text-white list-none">
           <li className="cursor-pointer">About Me</li>
