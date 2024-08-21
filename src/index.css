@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  .primary-background {
+    background-color: #313447;
+  }
+}
+
+@layer components {
+  .lexend-deca-font {
+    font-family: "Lexend Deca", sans-serif;
+  }
+}
