@@ -6,10 +6,10 @@ export default function App() {
     <div id="navbar" className="flex flex-row items-center justify-between p-4">
       <Image
         image={hawkimage}
-        className={["w-16 rounded-md shadow-sm cursor-pointer"]}
+        className={["w-16 rounded-md shadow-sm cursor-pointer max-sm:w-10"]}
       />
       <div className="contextBox">
-        <ul className="flex flex-row gap-8 text-white list-none">
+        <ul className="flex flex-row gap-8 text-white list-none max-sm:hidden">
           <li className="cursor-pointer">About Me</li>
           <li className="cursor-pointer">My Skills</li>
           <li className="cursor-pointer">My Certificate</li>

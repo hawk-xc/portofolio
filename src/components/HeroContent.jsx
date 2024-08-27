@@ -7,9 +7,16 @@ export default function HeroContent() {
       id="HeroContext"
       className="flex flex-row flex-wrap items-center h-screen justify-evenly"
     >
-      <div id="titleBox" className="flex flex-col flex-1 gap-2 p-10">
-        <span className="text-sm text-warning">{"<>Hello World</>"}</span>
-        <h2 className="text-5xl font-bold text-white">I’m Wahyu Tri</h2>
+      <div
+        id="titleBox"
+        className="z-50 flex flex-col flex-1 gap-2 translate-y-16 md:p-10 max-sm:p-8"
+      >
+        <span className="text-sm text-warning max-sm:hidden">
+          {"<>Hello World</>"}
+        </span>
+        <h2 className="text-white md:font-bold max-sm:font-extrabold md:text-7xl max-sm:text-7xl">
+          I’m Wahyu Tri
+        </h2>
         <h3 className="text-white">
           Student & Freelance Fullstack Web Developer
         </h3>
@@ -21,13 +28,17 @@ export default function HeroContent() {
           Hire Me
         </button>
       </div>
-      <div id="imageBox" className="relative flex-1 ">
+      <div
+        id="imageBox"
+        className="flex items-start justify-center flex-1 w-full max-sm:absolute"
+      >
         <Image
           image={wahyu_image}
           className={[
-            "w-[24rem] absolute -translate-y-[19rem] md:object-cover md:filter md:grayscale md:hover:grayscale-0 md:transition-all md:duration-300",
+            "md:w-[28rem] max-sm:w-64 absolute md:-translate-y-[20rem] max-sm:-translate-y-96  md:object-cover md:filter md:grayscale md:hover:grayscale-0 md:transition-all md:duration-300 z-0",
           ]}
         />
+        <div class="absolute bottom-0 z-40 bg-gradient-to-t from-[#313447] to-transparent w-full h-72 max-sm:-translate-x-10 max-sm:translate-y-9 -translate-x-96"></div>
       </div>
     </div>
   );
