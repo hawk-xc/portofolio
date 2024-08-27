@@ -10,6 +10,14 @@
   .secondary-background {
     background-color: #212330;
   }
+
+  .darken-secondary-background {
+    background-color: #111827;
+  }
+
+  .darken-secondary-background-2 {
+    background-color: #020617;
+  }
 }
 
 @layer components {

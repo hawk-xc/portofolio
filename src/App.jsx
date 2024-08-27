@@ -8,6 +8,7 @@ import AboutMeContent from "./components/AboutMeContent";
 import MenuToggle from "./particles/MenuToggle";
 import SideBar from "./components/SideBar";
 import MySkills from "./components/MySkills";
+import MySkillsContent from "./components/MySkillsContent";
 
 export default function App() {
   const [sidebar, setSideBar] = useState(false);
@@ -27,9 +28,9 @@ export default function App() {
       </AboutMe>
       <MenuToggle handleSideBarAction={handleSideBarAction} sidebar={sidebar} />
       <SideBar sidebar={sidebar} />
-      {/* <MySkills>
-        <span>MySkills</span>
-      </MySkills> */}
+      <MySkills>
+        <MySkillsContent />
+      </MySkills>
     </div>
   );
 }

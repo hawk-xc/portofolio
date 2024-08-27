@@ -11,11 +11,12 @@ export default function SideBar({ sidebar }) {
       <ul className="flex flex-col gap-2 font-light text-white list-none">
         {SideBarLists.map((item) => (
           <li
+            key={item.name}
             className="flex flex-row gap-2 px-2 py-2 text-lg cursor-pointer hover:bg-orange-500/90"
             id={item.links}
           >
             <div id="icon">
-              <i class={item.icon}></i>
+              <i className={item.icon}></i>
             </div>
             <div id="title">{item.name}</div>
           </li>

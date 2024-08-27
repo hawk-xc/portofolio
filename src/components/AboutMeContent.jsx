@@ -11,7 +11,7 @@ export default function AboutMeContent() {
         <p className="flex flex-row items-end gap-1 mt-4">
           <span className="text-sm font-bold text-warning">Let's talk.</span>
           <span>
-            <hr className="w-10 pb-1 font-bold text-warning" />
+            <hr className="w-10 pb-1" />
           </span>
         </p>
         <span id="email" className="font-bold text-md text-warning">
