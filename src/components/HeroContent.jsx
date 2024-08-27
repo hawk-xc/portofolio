@@ -1,5 +1,5 @@
 import Image from "../particles/Image";
-import wahyu_image from "../assets/hawk_image.png";
+import wahyu_image from "../assets/wahyu_creative.png";
 
 export default function HeroContent() {
   return (
@@ -35,10 +35,9 @@ export default function HeroContent() {
         <Image
           image={wahyu_image}
           className={[
-            "md:w-[28rem] max-sm:w-64 absolute md:-translate-y-[20rem] max-sm:-translate-y-96  md:object-cover md:filter md:grayscale md:hover:grayscale-0 md:transition-all md:duration-300 z-0",
+            "md:w-[28rem] max-sm:w-64 absolute md:-translate-y-[20rem] max-sm:-translate-y-96  md:object-cover md:filter md:hover:grayscale md:hover:grayscale-0 md:transition-all md:duration-300 z-0",
           ]}
         />
-        <div class="absolute bottom-0 z-40 bg-gradient-to-t from-[#313447] to-transparent w-full h-72 max-sm:-translate-x-10 max-sm:translate-y-9 -translate-x-96"></div>
       </div>
     </div>
   );
