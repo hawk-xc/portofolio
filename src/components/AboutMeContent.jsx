@@ -31,7 +31,7 @@ export default function AboutMeContent() {
           developer field since 2020, I have quite a lot of competency
           certificates.
         </span>
-        <button className="w-32 mt-12 text-sm font-normal btn btn-warning">
+        <button className="w-32 text-sm font-normal md:mt-12 max-sm:mb-10 max-sm:mt-2 btn btn-warning">
           Download CV
         </button>
       </div>

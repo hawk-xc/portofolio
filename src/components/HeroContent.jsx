@@ -9,7 +9,7 @@ export default function HeroContent() {
     >
       <div
         id="titleBox"
-        className="z-50 flex flex-col flex-1 gap-2 translate-y-16 md:p-10 max-sm:p-8"
+        className="z-50 flex flex-col flex-1 gap-2 translate-y-16 md:p-10 max-sm:px-8"
       >
         <span className="text-sm text-warning max-sm:hidden">
           {"<>Hello World</>"}
