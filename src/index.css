@@ -6,6 +6,10 @@
   .primary-background {
     background-color: #313447;
   }
+
+  .secondary-background {
+    background-color: #212330;
+  }
 }
 
 @layer components {
