@@ -22,7 +22,7 @@ export default function AboutMeContent() {
         </span>
       </div>
       <div id="aboutmeBox" className="flex flex-col flex-1">
-        <h2 className="font-bold text-white md:text-8xl max-sm:text-3xl">
+        <h2 className="font-bold text-white md:text-8xl max-sm:text-6xl">
           About me
         </h2>
         <span className="py-5 pr-2 text-sm text-white">

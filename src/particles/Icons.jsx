@@ -15,6 +15,12 @@ import dartIcon from "./../assets/icon/dart.png";
 import bootstrapIcon from "./../assets/icon/bootstrap.png";
 import flutterIcon from "./../assets/icon/flutter.png";
 import linuxIcon from "./../assets/icon/linux.png";
+import chatgptIcon from "./../assets/icon/chatgpt.jpeg";
+import postgresqlIcon from "./../assets/icon/postgresql.png";
+import dockerIcon from "./../assets/icon/docker.png";
+import nginxIcon from "./../assets/icon/nginx.png";
+import mysqlIcon from "./../assets/icon/mysql.png";
+import pythonIcon from "./../assets/icon/python.png";
 
 const Icons = [
   {
@@ -36,6 +42,22 @@ const Icons = [
   {
     image: phpIcon,
     alt: "php-icon",
+  },
+  {
+    image: pythonIcon,
+    alt: "python-icon",
+  },
+  {
+    image: mysqlIcon,
+    alt: "mysql-icon",
+  },
+  {
+    image: postgresqlIcon,
+    alt: "postgresql-icon",
+  },
+  {
+    image: dartIcon,
+    alt: "dart-icon",
   },
   {
     image: reactIcon,
@@ -74,16 +96,24 @@ const Icons = [
     alt: "vscode-icon",
   },
   {
-    image: dartIcon,
-    alt: "dart-icon",
-  },
-  {
     image: flutterIcon,
     alt: "flutter-icon",
   },
   {
     image: linuxIcon,
     alt: "linux-icon",
+  },
+  {
+    image: chatgptIcon,
+    alt: "chatgpt-icon",
+  },
+  {
+    image: nginxIcon,
+    alt: "nginx-icon",
+  },
+  {
+    image: dockerIcon,
+    alt: "docker-icon",
   },
 ];
 
