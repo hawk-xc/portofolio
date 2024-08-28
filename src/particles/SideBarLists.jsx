@@ -1,33 +1,33 @@
 const SideBarLists = [
   {
     icon: "ri-home-line",
-    name: "Home",
-    links: "#home",
+    name: "homeRef",
+    links: "Home",
   },
   {
     icon: "ri-user-line",
-    name: "About me",
-    links: "#aboutme",
+    name: "aboutmeRef",
+    links: "About Me",
   },
   {
     icon: "ri-flashlight-line",
-    name: "My Skills",
-    links: "#myskills",
+    name: "skillsRef",
+    links: "My Skills",
   },
   {
     icon: "ri-checkbox-circle-line",
-    name: "My Certificate",
-    links: "#mycertificate",
+    name: "certificateRef",
+    links: "My Certificate",
   },
   {
     icon: "ri-bookmark-line",
-    name: "My Project",
-    links: "#myproject",
+    name: "projectRef",
+    links: "My Projects",
   },
   {
     icon: "ri-phone-line",
-    name: "Contact me",
-    links: "#contactme",
+    name: "contactmeRef",
+    links: "Contact Me",
   },
 ];
 

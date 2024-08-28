@@ -2,9 +2,13 @@ export default function AboutMeContent() {
   return (
     <div
       id="AboutMeContent"
-      className="flex md:flex-row max-sm:flex-col-reverse"
+      className="flex items-center justify-center h-screen align-middle md:flex-row max-sm:flex-col-reverse max-sm:gap-5"
     >
-      <div id="contactBox" className="flex flex-col flex-1">
+      <div
+        id="contactBox"
+        className="flex flex-col md:flex-1 px-7"
+        data-aos="zoom-out-right"
+      >
         <h2 className="font-bold text-white md:text-6xl max-sm:text-3xl md:w-96">
           For any Question & Discus
         </h2>
@@ -21,7 +25,11 @@ export default function AboutMeContent() {
           WhatsApp: +62 821-3946-5611
         </span>
       </div>
-      <div id="aboutmeBox" className="flex flex-col flex-1">
+      <div
+        id="aboutmeBox"
+        className="flex flex-col md:flex-1 px-7"
+        data-aos="zoom-out-left"
+      >
         <h2 className="font-bold text-white md:text-8xl max-sm:text-6xl">
           About me
         </h2>

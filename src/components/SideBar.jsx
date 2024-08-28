@@ -1,6 +1,7 @@
+// SideBar.jsx
 import SideBarLists from "./../particles/SideBarLists";
 
-export default function SideBar({ sidebar }) {
+export default function SideBar({ sidebar, reference, refLists }) {
   const translate = sidebar ? "-translate-x-[0%]" : "-translate-x-[100%]";
 
   return (
@@ -13,12 +14,14 @@ export default function SideBar({ sidebar }) {
           <li
             key={item.name}
             className="flex flex-row gap-2 px-2 py-2 text-lg cursor-pointer hover:bg-orange-500/90"
-            id={item.links}
+            onClick={() => {
+              reference(refLists[item.name]);
+            }}
           >
             <div id="icon">
               <i className={item.icon}></i>
             </div>
-            <div id="title">{item.name}</div>
+            <div id="title">{item.links}</div>
           </li>
         ))}
       </ul>

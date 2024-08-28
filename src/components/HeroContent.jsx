@@ -10,6 +10,7 @@ export default function HeroContent() {
       <div
         id="titleBox"
         className="z-50 flex flex-col flex-1 gap-2 max-sm:translate-y-16 md:p-10 max-sm:px-8"
+        data-aos="fade-up-right"
       >
         <span className="text-sm text-warning max-sm:hidden">
           {"<>Hello World</>"}
@@ -31,6 +32,7 @@ export default function HeroContent() {
       <div
         id="imageBox"
         className="flex items-start justify-center flex-1 w-full max-sm:absolute"
+        data-aos="fade-up-left"
       >
         <Image
           image={wahyu_image}
