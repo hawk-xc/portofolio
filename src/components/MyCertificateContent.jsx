@@ -37,7 +37,7 @@ export default function MyCertificateContent() {
                 className="flex flex-row gap-2 text-white transition-all duration-150 cursor-pointer md:text-6xl max-sm:text-3xl md:p-5 max-sm:p-3 hover:secondary-background focus:scale-95 max-sm:secondary-background max-sm:rounded-md max-sm:focus:scale-95"
                 data-aos="zoom-in-up"
                 onClick={() => {
-                  setModalData(item.items);
+                  setModalData(item);
                   window.my_modal.showModal();
                 }}
                 key={item.name}
@@ -55,9 +55,6 @@ export default function MyCertificateContent() {
         </ul>
       </div>
       <div>
-        <button className="btn" onClick={() => window.my_modal.showModal()}>
-          Open Modal
-        </button>
         <ModalBox modalData={modalData} />
       </div>
     </div>

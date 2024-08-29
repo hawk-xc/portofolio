@@ -1,7 +1,8 @@
 import Image from "../particles/Image";
 import hawkimage from "../assets/hawkxc.png";
+import SideBarLists from "./../particles/SideBarLists";
 
-export default function App() {
+export default function App({ reference, refLists }) {
   return (
     <div id="navbar" className="flex flex-row items-center justify-between p-4">
       <Image
@@ -10,10 +11,17 @@ export default function App() {
       />
       <div className="contextBox">
         <ul className="flex flex-row gap-8 text-white list-none max-sm:hidden">
-          <li className="cursor-pointer">About Me</li>
-          <li className="cursor-pointer">My Skills</li>
-          <li className="cursor-pointer">My Certificate</li>
-          <li className="cursor-pointer">My Project</li>
+          {SideBarLists.filter((_, index) => index !== 0).map((item) => (
+            <li
+              key={item.name}
+              className="cursor-pointer"
+              onClick={() => {
+                reference(refLists[item.name]);
+              }}
+            >
+              {item.links}
+            </li>
+          ))}
         </ul>
       </div>
     </div>

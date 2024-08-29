@@ -61,7 +61,7 @@ export default function App() {
   return (
     <div className="relative flex flex-col items-center justify-center overflow-hidden align-middle md:px-10 max-sm:px-0 primary-background lexend-deca-font">
       <Hero homeRef={homeRef}>
-        <Navbar />
+        <Navbar reference={reference} refLists={refLists} />
         <HeroContent />
       </Hero>
       <AboutMe aboutmeRef={aboutmeRef}>
