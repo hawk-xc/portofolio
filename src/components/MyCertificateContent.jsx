@@ -1,6 +1,10 @@
+import { useState } from "react";
 import CertificateItems from "../particles/CertificateItems";
+import ModalBox from "../particles/ModalBox";
 
 export default function MyCertificateContent() {
+  const [modalData, setModalData] = useState(null);
+
   return (
     <div
       id="mycertificate"
@@ -28,9 +32,14 @@ export default function MyCertificateContent() {
         <ul className="flex flex-wrap justify-center md:flex-row max-sm:flex-col md:w-6/12 max-sm:w-8/12 md:gap-20 max-sm:gap-5">
           {CertificateItems.map((item) => {
             return (
+              // onClick={() => window.my_modal.showModal()}
               <div
                 className="flex flex-row gap-2 text-white transition-all duration-150 cursor-pointer md:text-6xl max-sm:text-3xl md:p-5 max-sm:p-3 hover:secondary-background focus:scale-95 max-sm:secondary-background max-sm:rounded-md max-sm:focus:scale-95"
                 data-aos="zoom-in-up"
+                onClick={() => {
+                  setModalData(item.items);
+                  window.my_modal.showModal();
+                }}
                 key={item.name}
               >
                 <i className={`${item.icon}`}></i>
@@ -44,6 +53,12 @@ export default function MyCertificateContent() {
             );
           })}
         </ul>
+      </div>
+      <div>
+        <button className="btn" onClick={() => window.my_modal.showModal()}>
+          Open Modal
+        </button>
+        <ModalBox modalData={modalData} />
       </div>
     </div>
   );

@@ -17,13 +17,13 @@ export default function ContactMeContent() {
         <div id="contactDetail" className="text-white" data-aos="zoom-in-up">
           <ul className="flex flex-col gap-3">
             <li>
-              <i class="ri-map-pin-2-line"></i> Surakarta, Indonesia
+              <i className="ri-map-pin-2-line"></i> Surakarta, Indonesia
             </li>
             <li>
-              <i class="ri-mail-line"></i> wahyutricahyono777@gmail.com
+              <i className="ri-mail-line"></i> wahyutricahyono777@gmail.com
             </li>
             <li>
-              <i class="ri-phone-line"></i> +62 821-3946-5611
+              <i className="ri-phone-line"></i> +62 821-3946-5611
             </li>
           </ul>
         </div>
@@ -33,13 +33,13 @@ export default function ContactMeContent() {
           data-aos="zoom-in-up"
         >
           <a href="https://www.linkedin.com/in/wahyu-tri-cahyono-2824052b7/">
-            <i class="ri-linkedin-box-fill hover:text-blue-50"></i>
+            <i className="ri-linkedin-box-fill hover:text-blue-50"></i>
           </a>
           <a href="https://www.instagram.com/wahyutrieee___/">
-            <i class="ri-instagram-fill hover:text-blue-50"></i>
+            <i className="ri-instagram-fill hover:text-blue-50"></i>
           </a>
           <a href="https://github.com/hawk-xc">
-            <i class="ri-github-fill hover:text-blue-50"></i>
+            <i className="ri-github-fill hover:text-blue-50"></i>
           </a>
         </div>
       </div>
