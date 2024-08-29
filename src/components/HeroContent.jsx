@@ -16,7 +16,7 @@ export default function HeroContent() {
           {"<>Hello World</>"}
         </span>
         <h2 className="text-white md:font-extrabold max-sm:font-extrabold md:text-8xl max-sm:text-7xl">
-          I’m Wahyu Tri
+          I’m <span className="text-warning">Wahyu Tri</span>
         </h2>
         <h3 className="text-white md:text-xl">
           Student & Freelance Fullstack Web Developer

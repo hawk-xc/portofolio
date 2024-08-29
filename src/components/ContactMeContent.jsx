@@ -1,23 +1,51 @@
-import doodleImage from "./../assets/doodle.png";
+import hawkImage from "./../assets/codewithhawk.png";
 
 export default function ContactMeContent() {
   return (
-    <div className="flex flex-col items-center justify-center w-auto h-screen align-middle">
+    <div className="flex items-center justify-center w-auto h-screen align-middle md:flex-row max-sm:flex-col md:px-20 md:gap-5 max-sm:gap-10">
+      <div id="avatar" data-aos="zoom-in-up">
+        <img
+          src={hawkImage}
+          alt="codewithhawk image"
+          className="rounded-full shadow-lg max-sm:w-24 md:w-52"
+        />
+      </div>
       <div
-        id="certificatetitle"
-        className="flex flex-col items-center justify-center gap-6 md:w-6/12 max-sm:w-8/12"
+        id="contactContent"
+        className="flex flex-col gap-5 max-sm:items-center max-sm:align-middle md:pl-10 max-sm:justify-center"
       >
-        <h2 className="text-4xl font-bold text-white" data-aos="zoom-in-up">
-          Contact <span className="text-warning">Me</span>
-        </h2>
-        <span
-          className="text-center text-white max-sm:text-sm"
+        <div id="contactDetail" className="text-white" data-aos="zoom-in-up">
+          <ul className="flex flex-col gap-3">
+            <li>
+              <i class="ri-map-pin-2-line"></i> Surakarta, Indonesia
+            </li>
+            <li>
+              <i class="ri-mail-line"></i> wahyutricahyono777@gmail.com
+            </li>
+            <li>
+              <i class="ri-phone-line"></i> +62 821-3946-5611
+            </li>
+          </ul>
+        </div>
+        <div
+          id="socialMediaDetail"
+          className="text-6xl text-white md:mt-5 max-sm:mt-10"
           data-aos="zoom-in-up"
         >
-          Contact me for your business web project, contact the email and phone
-          number below for more details
-        </span>
+          <a href="https://www.linkedin.com/in/wahyu-tri-cahyono-2824052b7/">
+            <i class="ri-linkedin-box-fill hover:text-blue-50"></i>
+          </a>
+          <a href="https://www.instagram.com/wahyutrieee___/">
+            <i class="ri-instagram-fill hover:text-blue-50"></i>
+          </a>
+          <a href="https://github.com/hawk-xc">
+            <i class="ri-github-fill hover:text-blue-50"></i>
+          </a>
+        </div>
       </div>
+      <footer className="absolute font-light text-white bottom-4">
+        <p>© {new Date().getFullYear()} Codewithhawk. All rights reserved.</p>
+      </footer>
     </div>
   );
 }
