@@ -11,12 +11,16 @@ export default function MyProjectContent() {
       <div
         id="projectBox"
         className="w-11/12 secondary-background md:p-10 max-sm:p-4"
+        data-aos="zoom-in-down"
       >
         <div id="titleBox" className="flex flex-col gap-2">
-          <h2 className="font-extrabold md:text-4xl max-sm:text-3xl">
+          <h2
+            className="font-extrabold md:text-4xl max-sm:text-3xl"
+            data-aos="zoom-in-up"
+          >
             My <span className="text-warning">Project</span>
           </h2>
-          <span className="text-xs">
+          <span className="text-xs" data-aos="zoom-in-up">
             Here are some projects I have created using web technologies that I
             have mastered.
           </span>
@@ -27,6 +31,7 @@ export default function MyProjectContent() {
         >
           {projectLists.map((item) => (
             <div
+              data-aos="zoom-out-up"
               key={item.name}
               className="flex flex-col gap-2 p-3 text-white transition-all duration-150 cursor-pointer md:w-5/12 max-sm:w-full active:darken-secondary-background-2 hover:scale-105 darken-secondary-background"
               onClick={() => {
