@@ -41,6 +41,9 @@ export default function ContactMeContent() {
           <a href="https://github.com/hawk-xc">
             <i className="ri-github-fill hover:text-blue-50"></i>
           </a>
+          <a href="https://wa.me/6282139465611">
+            <i class="ri-whatsapp-fill hover:text-blue-50"></i>
+          </a>
         </div>
       </div>
       <footer className="absolute font-light text-white bottom-4">

@@ -1,7 +1,7 @@
 import Image from "../particles/Image";
 import wahyu_image from "../assets/wahyu_creative.png";
 
-export default function HeroContent() {
+export default function HeroContent({ reference, contactmeRef }) {
   return (
     <div
       id="HeroContext"
@@ -25,7 +25,12 @@ export default function HeroContent() {
           I love exploring new things, my motto is "be a better version of the
           previous second"
         </span>
-        <button className="w-24 mt-5 text-sm font-normal btn btn-warning">
+        <button
+          className="w-24 mt-5 text-sm font-normal btn btn-warning"
+          onClick={() => {
+            reference(contactmeRef);
+          }}
+        >
           Hire Me
         </button>
       </div>

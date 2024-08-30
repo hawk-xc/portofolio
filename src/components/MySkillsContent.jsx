@@ -24,7 +24,7 @@ export default function MySkillsContent() {
           {Icons.map((icon) => (
             <li
               key={icon.alt}
-              className="flex items-center justify-center align-middle bg-white rounded-md md:w-20 max-sm:w-16 aspect-square hover:shadow-lg"
+              className="flex items-center justify-center align-middle bg-white rounded-md cursor-pointer md:w-20 max-sm:w-16 aspect-square hover:shadow-lg"
               data-aos="zoom-in"
             >
               <Image
