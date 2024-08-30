@@ -18,6 +18,7 @@ import MyProject from "./components/MyProject";
 import MyProjectContent from "./components/MyProjectContent";
 import ContactMe from "./components/ContactMe";
 import ContactMeContent from "./components/ContactMeContent";
+import ScrollProgress from "./components/ScrollProgress";
 
 export default function App() {
   const [sidebar, setSideBar] = useState(false);
@@ -60,6 +61,7 @@ export default function App() {
 
   return (
     <div className="relative flex flex-col items-center justify-center overflow-hidden align-middle md:px-10 max-sm:px-0 primary-background lexend-deca-font">
+      <ScrollProgress />
       <Hero homeRef={homeRef}>
         <Navbar reference={reference} refLists={refLists} />
         <HeroContent contactmeRef={contactmeRef} reference={reference} />
