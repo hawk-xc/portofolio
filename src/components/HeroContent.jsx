@@ -21,7 +21,7 @@ export default function HeroContent({ reference, contactmeRef }) {
         <h3 className="text-white md:text-xl">
           Student & Freelance Fullstack Web Developer
         </h3>
-        <span className="text-sm w-80">
+        <span className="w-full text-sm">
           I love exploring new things, my motto is "be a better version of the
           previous second"
         </span>

@@ -46,9 +46,6 @@ export default function ContactMeContent() {
           </a>
         </div>
       </div>
-      <footer className="absolute font-light text-white bottom-4">
-        <p>© {new Date().getFullYear()} Codewithhawk. All rights reserved.</p>
-      </footer>
     </div>
   );
 }

@@ -14,11 +14,14 @@ export default function MyCertificateContent() {
         id="certificatetitle"
         className="flex flex-col items-center justify-center gap-6 md:w-6/12 max-sm:w-8/12"
       >
-        <h2 className="text-4xl font-bold text-white" data-aos="zoom-in-up">
+        <h2
+          className="font-bold text-white md:text-4xl max-sm:text-2xl"
+          data-aos="zoom-in-up"
+        >
           My <span className="text-warning">Certificate</span>
         </h2>
         <span
-          className="text-center text-white max-sm:text-sm"
+          className="text-center text-white max-sm:text-xs"
           data-aos="zoom-in-up"
         >
           It would not be complete if we discussed skills without recognition,
@@ -29,7 +32,7 @@ export default function MyCertificateContent() {
         id="certificateitems"
         className="flex justify-center w-full md:mt-10 max-sm:mt-2"
       >
-        <ul className="flex flex-wrap justify-center md:flex-row max-sm:flex-col md:w-6/12 max-sm:w-8/12 md:gap-20 max-sm:gap-5">
+        <ul className="flex flex-wrap justify-center md:flex-row max-sm:flex-col md:w-6/12 max-sm:w-8/12 md:gap-20 max-sm:gap-2">
           {CertificateItems.map((item) => {
             return (
               // onClick={() => window.my_modal.showModal()}

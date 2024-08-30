@@ -19,6 +19,7 @@ import MyProjectContent from "./components/MyProjectContent";
 import ContactMe from "./components/ContactMe";
 import ContactMeContent from "./components/ContactMeContent";
 import ScrollProgress from "./components/ScrollProgress";
+import Footer from "./components/Footer";
 
 export default function App() {
   const [sidebar, setSideBar] = useState(false);
@@ -81,6 +82,7 @@ export default function App() {
       <ContactMe contactmeRef={contactmeRef}>
         <ContactMeContent />
       </ContactMe>
+      <Footer />
       <MenuToggle handleSideBarAction={handleSideBarAction} sidebar={sidebar} />
       <SideBar sidebar={sidebar} reference={reference} refLists={refLists} />
     </div>
