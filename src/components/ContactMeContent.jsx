@@ -29,7 +29,7 @@ export default function ContactMeContent() {
         </div>
         <div
           id="socialMediaDetail"
-          className="text-6xl text-white md:mt-5 max-sm:mt-10"
+          className="text-white md:text-6xl max-sm:text-4xl md:mt-5 max-sm:mt-10 max-sm:gap-3 max-sm:flex max-sm:flex-row"
           data-aos="zoom-in-up"
         >
           <a href="https://www.linkedin.com/in/wahyu-tri-cahyono-2824052b7/">
