@@ -24,6 +24,7 @@ import Footer from "./components/Footer";
 export default function App() {
   const [sidebar, setSideBar] = useState(false);
   const [currentRefIndex, setCurrentRefIndex] = useState(0); // State untuk melacak referensi yang terlihat saat ini
+
   const homeRef = useRef(null);
   const aboutmeRef = useRef(null);
   const skillsRef = useRef(null);
@@ -31,14 +32,14 @@ export default function App() {
   const projectRef = useRef(null);
   const contactmeRef = useRef(null);
 
-  const refLists = [
+  const refLists = {
     homeRef,
     aboutmeRef,
     skillsRef,
     certificateRef,
     projectRef,
     contactmeRef,
-  ];
+  };
 
   const reference = (ref) => {
     if (ref?.current) {
@@ -59,9 +60,10 @@ export default function App() {
 
   // Fungsi untuk menangani klik tombol scroll ke referensi berikutnya
   const scrollToNextRef = () => {
-    const nextRefIndex = (currentRefIndex + 1) % refLists.length; // Menemukan indeks referensi berikutnya (looping kembali ke awal setelah yang terakhir)
+    const refKeys = Object.keys(refLists);
+    const nextRefIndex = (currentRefIndex + 1) % refKeys.length; // Menemukan indeks referensi berikutnya (looping kembali ke awal setelah yang terakhir)
     setCurrentRefIndex(nextRefIndex); // Update state dengan indeks referensi saat ini
-    reference(refLists[nextRefIndex]); // Panggil fungsi untuk scroll ke ref berikutnya
+    reference(refLists[refKeys[nextRefIndex]]); // Panggil fungsi untuk scroll ke ref berikutnya
   };
 
   useEffect(() => {
@@ -73,9 +75,10 @@ export default function App() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const index = refLists.findIndex(
-              (ref) => ref.current === entry.target
+            const refKey = Object.keys(refLists).find(
+              (key) => refLists[key].current === entry.target
             );
+            const index = Object.keys(refLists).indexOf(refKey);
             setCurrentRefIndex(index); // Update state dengan indeks referensi yang terlihat saat ini
           }
         });
@@ -84,7 +87,7 @@ export default function App() {
     );
 
     // Observasi semua elemen yang menggunakan refs
-    refLists.forEach((ref) => {
+    Object.values(refLists).forEach((ref) => {
       if (ref.current) observer.observe(ref.current);
     });
 
@@ -120,15 +123,6 @@ export default function App() {
         scrollToNextRef={scrollToNextRef}
         currentRefIndex={currentRefIndex}
       />
-
-      {/* Tombol Scroll ke Ref Selanjutnya */}
-      {/* <div
-        id="scrollButton"
-        className="fixed flex items-center justify-center align-middle rounded-full cursor-pointer right-10 w-14 aspect-square secondary-background bottom-10"
-        onClick={scrollToNextRef} // Tambahkan event handler untuk klik
-      >
-        <i className="text-2xl ri-skip-down-fill"></i>
-      </div> */}
     </div>
   );
 }
