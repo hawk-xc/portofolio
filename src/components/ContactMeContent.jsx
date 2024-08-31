@@ -42,7 +42,7 @@ export default function ContactMeContent() {
             <i className="ri-github-fill hover:text-blue-50"></i>
           </a>
           <a href="https://wa.me/6282139465611">
-            <i class="ri-whatsapp-fill hover:text-blue-50"></i>
+            <i className="ri-whatsapp-fill hover:text-blue-50"></i>
           </a>
         </div>
       </div>

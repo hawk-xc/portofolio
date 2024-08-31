@@ -1,4 +1,3 @@
-// App.jsx
 import { useState, useEffect, useRef } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -19,10 +18,12 @@ import MyProjectContent from "./components/MyProjectContent";
 import ContactMe from "./components/ContactMe";
 import ContactMeContent from "./components/ContactMeContent";
 import ScrollProgress from "./components/ScrollProgress";
+import ScrollButton from "./components/ScrollButton";
 import Footer from "./components/Footer";
 
 export default function App() {
   const [sidebar, setSideBar] = useState(false);
+  const [currentRefIndex, setCurrentRefIndex] = useState(0); // State untuk melacak referensi yang terlihat saat ini
   const homeRef = useRef(null);
   const aboutmeRef = useRef(null);
   const skillsRef = useRef(null);
@@ -30,14 +31,14 @@ export default function App() {
   const projectRef = useRef(null);
   const contactmeRef = useRef(null);
 
-  const refLists = {
-    homeRef: homeRef,
-    aboutmeRef: aboutmeRef,
-    skillsRef: skillsRef,
-    certificateRef: certificateRef,
-    projectRef: projectRef,
-    contactmeRef: contactmeRef,
-  };
+  const refLists = [
+    homeRef,
+    aboutmeRef,
+    skillsRef,
+    certificateRef,
+    projectRef,
+    contactmeRef,
+  ];
 
   const reference = (ref) => {
     if (ref?.current) {
@@ -56,8 +57,38 @@ export default function App() {
     setSideBar(!sidebar);
   };
 
+  // Fungsi untuk menangani klik tombol scroll ke referensi berikutnya
+  const scrollToNextRef = () => {
+    const nextRefIndex = (currentRefIndex + 1) % refLists.length; // Menemukan indeks referensi berikutnya (looping kembali ke awal setelah yang terakhir)
+    setCurrentRefIndex(nextRefIndex); // Update state dengan indeks referensi saat ini
+    reference(refLists[nextRefIndex]); // Panggil fungsi untuk scroll ke ref berikutnya
+  };
+
   useEffect(() => {
     AOS.init();
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = refLists.findIndex(
+              (ref) => ref.current === entry.target
+            );
+            setCurrentRefIndex(index); // Update state dengan indeks referensi yang terlihat saat ini
+          }
+        });
+      },
+      { threshold: 0.5 } // Mengatur threshold 50% untuk dianggap terlihat
+    );
+
+    // Observasi semua elemen yang menggunakan refs
+    refLists.forEach((ref) => {
+      if (ref.current) observer.observe(ref.current);
+    });
+
+    return () => observer.disconnect(); // Bersihkan observer saat komponen di-unmount
   }, []);
 
   return (
@@ -85,6 +116,19 @@ export default function App() {
       <Footer />
       <MenuToggle handleSideBarAction={handleSideBarAction} sidebar={sidebar} />
       <SideBar sidebar={sidebar} reference={reference} refLists={refLists} />
+      <ScrollButton
+        scrollToNextRef={scrollToNextRef}
+        currentRefIndex={currentRefIndex}
+      />
+
+      {/* Tombol Scroll ke Ref Selanjutnya */}
+      {/* <div
+        id="scrollButton"
+        className="fixed flex items-center justify-center align-middle rounded-full cursor-pointer right-10 w-14 aspect-square secondary-background bottom-10"
+        onClick={scrollToNextRef} // Tambahkan event handler untuk klik
+      >
+        <i className="text-2xl ri-skip-down-fill"></i>
+      </div> */}
     </div>
   );
 }
