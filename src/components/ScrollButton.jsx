@@ -1,5 +1,4 @@
 const ScrollButton = ({ scrollToNextRef, currentRefIndex }) => {
-  console.log(currentRefIndex);
   return (
     <div
       id="scrollButton"
