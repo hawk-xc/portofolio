@@ -11,26 +11,23 @@ const ModalBox = ({ modalData }) => {
             <li key={item.name}>
               <div className="collapse bg-base-200">
                 <input type="radio" name="my-accordion-1" />
-                <div className="text-xl font-medium text-white collapse-title">
+                <div className="text-xl font-medium collapse-title">
                   {item.name}
                 </div>
                 <div className="collapse-content">
                   <p>
                     Publisher :{" "}
-                    <span className="text-white">{item?.publisher ?? "-"}</span>
+                    <span className="">{item?.publisher ?? "-"}</span>
                   </p>
                   <p>
                     Credential :{" "}
-                    <span className="text-white">
+                    <span className="">
                       {item?.credential ? item.credential : "-"}
                     </span>
                   </p>
                   <p>
                     Year :{" "}
-                    <span className="text-white">
-                      {" "}
-                      {item?.year ? item.year : "-"}
-                    </span>
+                    <span className=""> {item?.year ? item.year : "-"}</span>
                   </p>
                   {item?.ref ? (
                     <p className="mt-3">
