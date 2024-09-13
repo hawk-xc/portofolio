@@ -11,7 +11,7 @@ const ProjectModalBox = ({ modalData }) => {
         <h3 className="text-2xl font-bold text-warning">{modalData?.name}</h3>
         <span className="flex flex-row flex-wrap gap-2 mt-3 text-xs">
           {modalData?.technology.map((data) => (
-            <div className="p-1 transition-all duration-150 cursor-pointer darken-secondary-background hover:scale-105">
+            <div className="p-1 transition-all duration-150 cursor-pointer hover:scale-105 bg-base-200">
               {data}
             </div>
           ))}

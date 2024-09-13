@@ -20,7 +20,7 @@ export default function MySkillsContent() {
           <span className="font-bold text-warning">Skills and Technology</span>{" "}
           iam used
         </h2>
-        <span className="mt-2 max-sm:text-md" data-aos="fade-up">
+        <span className="mt-2 max-sm:text-md text-slate-300" data-aos="fade-up">
           The following are more or less the skills and technologies that I
           learned and used
         </span>
