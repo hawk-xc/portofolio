@@ -23,7 +23,7 @@ export default function ContactMeContent() {
               <i className="ri-mail-line"></i> wahyutricahyono777@gmail.com
             </li>
             <li>
-              <i className="ri-phone-line"></i> +62 821-3946-5611
+              <i class="ri-discord-line"></i> hawkxc
             </li>
           </ul>
         </div>
@@ -41,8 +41,8 @@ export default function ContactMeContent() {
           <a href="https://github.com/hawk-xc">
             <i className="ri-github-fill hover:text-blue-50"></i>
           </a>
-          <a href="https://wa.me/6282139465611">
-            <i className="ri-whatsapp-fill hover:text-blue-50"></i>
+          <a href="https://t.me/wahyutrieee">
+            <i class="ri-telegram-fill hover:text-blue-50"></i>
           </a>
         </div>
       </div>
