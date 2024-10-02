@@ -85,7 +85,7 @@ const projectLists = [
       "JQuery",
     ],
     summary: "E-commerce web sales of leather bags in Jogjakarta",
-    reference: "astraeashop.com",
+    reference: "https://astraeashop.com",
     github: "https://github.com/hawk-xc/Astraea-ecommerce.git",
     prototype: null,
   },
