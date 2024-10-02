@@ -84,7 +84,7 @@ const projectLists = [
       "Payment Gateway",
       "JQuery",
     ],
-    summary: "My portfolio project that I developed using React JS",
+    summary: "E-commerce web sales of leather bags in Jogjakarta",
     reference: "astraeashop.com",
     github: "https://github.com/hawk-xc/Astraea-ecommerce.git",
     prototype: null,
