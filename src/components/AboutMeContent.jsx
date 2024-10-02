@@ -22,7 +22,7 @@ export default function AboutMeContent() {
           wahyutricahyono777@gmail.com
         </span>
         <span id="email" className="mt-10 text-sm text-slate-400">
-          WhatsApp: +62 821-3946-5611
+          Contact Me and let's create new things
         </span>
       </div>
       <div
