@@ -74,6 +74,21 @@ const projectLists = [
     prototype:
       "https://www.figma.com/design/NXTt9MQ6yycDGzYfnKE3J0/Portofolio?m=auto&t=NTvXpNZHhkcFPg2e-6",
   },
+  {
+    date: "September 2024",
+    name: "Astraea E-Commerce web",
+    technology: [
+      "PHP",
+      "Laravel 10",
+      "Bootstrap 5",
+      "Payment Gateway",
+      "JQuery",
+    ],
+    summary: "My portfolio project that I developed using React JS",
+    reference: "astraeashop.com",
+    github: "https://github.com/hawk-xc/Astraea-ecommerce.git",
+    prototype: null,
+  },
 ];
 
 export default projectLists;
